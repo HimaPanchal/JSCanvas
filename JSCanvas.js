@@ -8,8 +8,10 @@ var timerID = 0;
 window.onload = function () {
     Canvas = document.getElementById("can");
     Context = Canvas.getContext("2d");  //getContext() is a built-in HTML object with properties and methods for drawing
-    Context.lineWidth = 10;
+    Context.lineWidth = 10; // lineWidth
+    //Sets or returns the color to use for the shadows
     Context.shadowColor = "black";
+    //sets the blur leve; for shadows
     Context.shadowBlur = 20;
 
     document.getElementById("btnAdd").onclick = AddRing;
@@ -74,8 +76,12 @@ function Show() {
     for (var i = 0; i < Rings.length; ++i) {
         Context.strokeStyle = Rings[i].color;
         Context.lineWidth = Rings[i].lineWidth;
+        
         Context.beginPath();
+        //Defining the circle with an arc(x,y,r,startAngle,endAngle)
         Context.arc(Rings[i].x, Rings[i].y, Rings[i].size, 0, 2 * Math.PI);
+        //stroke method actually draws the circle
+        
         Context.stroke();
     }
 }
