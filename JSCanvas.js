@@ -1,13 +1,13 @@
 
-var Rings = [];
-var Canvas = null;
+var Rings = [];     //making an array of Rings
+var Canvas = null;  
 var Context = null;
-var TimerID = false;
+var TimerID = false;    //Initially setting the  timer to false
 var timerID = 0;
 
 window.onload = function () {
     Canvas = document.getElementById("can");
-    Context = Canvas.getContext("2d");
+    Context = Canvas.getContext("2d");  //getContext() is a built-in HTML object with properties and methods for drawing
     Context.lineWidth = 10;
     Context.shadowColor = "black";
     Context.shadowBlur = 20;
